@@ -23,10 +23,12 @@ import { createApi , fetchBaseQuery } from '@reduxjs/toolkit/query/react';
           },
         }),
         endpoints: (builder) => ({
-          getCharts: builder.query({ query: () =>  '/charts/track'})
+          getCharts: builder.query({ query: () =>  '/charts/track'}), 
+          getSongDetails: builder.query({ query: ({songid}) => `/songs/v2/get-details?.id=${songid}` })
         }),
     });
 
     export const {
-      useGetChartsQuery 
+      useGetChartsQuery ,
+      useGetSongDetailsQuery
     } = shazamApi ;

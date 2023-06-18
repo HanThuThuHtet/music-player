@@ -29,15 +29,15 @@ const Sidebar = () => {
     <>
 
     {/* Desktop */}
-      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
+      {/* <div className="md:flex hidden flex-col w-[200px] py-10 px-4 bg-[#191624]">
         <img src={spotify} alt="logo" className="w-full h-14 object-contain" />
         <NavLinks />
-      </div>
+      </div> */}
 
     {/* Mobile */}
-    <div className="absolute md:hidden block top-6 right-3">
+    <div className="absolute top-12 left-3">
       { mobileMenuOpen ? 
-        ( <RiCloseLine className="w-6 h-6 text-white mr-2" 
+        ( <HiOutlineMenu className="w-6 h-6 text-white mr-2" 
                        onClick={()=>setMobileMenuOpen(false)}
           /> ) 
         : 
@@ -46,8 +46,20 @@ const Sidebar = () => {
            /> ) }
     </div>
 
-    <div className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10 to-[#483d8b] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+    <div className={`absolute top-0 h-screen lg:w-1/5 md:w-2/3 bg-gradient-to-tl from-white/10 to-[#483d8b] backdrop-blur-lg z-10 p-6  smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+        <div className="flex flex-row">
+          <div className="absolute top-12 left-3">
+            { mobileMenuOpen ? 
+              ( <HiOutlineMenu className="w-6 h-6 text-white mr-2" 
+                            onClick={()=>setMobileMenuOpen(false)}
+                /> ) 
+              : 
+              ( <HiOutlineMenu className="w-6 h-6 text-white mr-2"
+                              onClick={()=>setMobileMenuOpen(true)}
+                /> ) }
+          </div>
         <img src={spotify} alt="logo" className="w-full h-14 object-contain" />
+        </div>
         <NavLinks handleClick={() => setMobileMenuOpen(false)} />
       </div>
 
