@@ -44,11 +44,13 @@ const TopPlay = () => {
   const { data } = useGetChartsQuery();
   const divRef = useRef(null);
 
+  
+
   useEffect(() => {
     divRef.current.scrollIntoView({behavior : 'smooth'});
   },[])
 
-  const topPlays = data.tracks?.slice(0,5);
+  const topPlays = data?.tracks?.slice(0,5);
 
   const handlePauseClick = () => {
     dispatch(playPause(false));
@@ -90,7 +92,7 @@ const TopPlay = () => {
       {/* End Top Charts */} 
      
      {/* Start Top Artists */}
-      <div className="w-full flex flex-col mt-8">
+      <div className="w-full flex flex-col mt-8 mb-60">
 
         <div className="flex flex-row justify-between items-center"> 
           <h2 className="text-white font-bold text-2xl ">Top Artists</h2>

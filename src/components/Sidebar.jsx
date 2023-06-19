@@ -46,7 +46,7 @@ const Sidebar = () => {
            /> ) }
     </div>
 
-    <div className={`absolute top-0 h-screen lg:w-1/5 md:w-2/3 bg-gradient-to-tl from-white/10 to-[#483d8b] backdrop-blur-lg z-10 p-6  smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+    <div className={`absolute top-0 h-screen lg:w-1/5 md:w-2/3 bg-gradient-to-tl from-black to-[#0f0d20] backdrop-blur-lg z-10 p-6  smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
         <div className="flex flex-row">
           <div className="absolute top-12 left-3">
             { mobileMenuOpen ? 

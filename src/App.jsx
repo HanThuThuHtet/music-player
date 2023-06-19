@@ -14,7 +14,7 @@ const App = () => {
         <Searchbar />
 
         <div className="px-6 h-[calc(100vh-20px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
-          <div className="flex  lg:w-[3%] md:w-full ">
+          <div className="flex  lg:w-[3%] md:w-full  ">
             <Sidebar />
           </div>
           <div className="flex  lg:w-[68%] md:w-full  h-fit pb-40">

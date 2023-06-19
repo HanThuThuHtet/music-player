@@ -18,7 +18,7 @@ const Discover = () => {
     return(
         <div className="flex flex-col ">
 
-            <div className="w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10">
+            <div className="w-full flex justify-between items-center sm:flex-row flex-col mt-4  mb-10">
                 <h2 className="font-bold text-3xl text-white text-left">Dicover {genreTitle}</h2>
                 <select name="" id="" onChange={() => {}}
                         value=""
@@ -27,7 +27,7 @@ const Discover = () => {
                 </select>
             </div>
 
-            <div className="flex flex-wrap sm:justify-start justify-center gap-8">
+            <div className="flex flex-wrap sm:justify-start justify-center gap-4">
                 
                 {(data.tracks).map((song,i) => (
                     <SongCard 
