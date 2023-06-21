@@ -67,7 +67,7 @@ const TopPlay = () => {
       {/* Start Top Charts */}
       <div className="w-full flex flex-col">
 
-        <div className="flex flex-row justify-between items-center"> 
+        <div className="flex flex-row justify-between items-center pt-12"> 
           <h2 className="text-white font-bold text-2xl ">Top Charts</h2>
           <Link to={"/top-charts"}>
             <p className="text-gray-300 text-base cursor-pointer">See more</p>

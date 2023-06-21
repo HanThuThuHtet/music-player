@@ -46,8 +46,8 @@ import { createApi , fetchBaseQuery } from '@reduxjs/toolkit/query/react';
           getArtistDetails: builder.query({query : (artistId) => `/artist/get-details?id=${artistId}`}),
           getArtistTopSongs: builder.query({query :(artistId) =>  `/artist/get-top-songs?id=${artistId}`}),
           getTopSongsByCountry: builder.query({query : (countrycode) => `/charts/get-top-songs-in-country?country_code=${countrycode}`}),
-          // getTopSongsByGenre: builder.query({query: (genreid) => `/charts/get-top-songs-in_world_by_genre?genre=${genreid}` }),
-          // getSongsBySearch: builder.query({query: (Searchterm) => `/search?term=${Searchterm}`})
+          getTopSongsByGenre: builder.query({query: (genre) => `/charts/get-top-songs-in_world_by_genre?genre=${genre}` }),
+          getSongsBySearch: builder.query({query: (Searchterm) => `/search?term=${Searchterm}`})
   
       })
   })

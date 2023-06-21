@@ -11,13 +11,14 @@ const App = () => {
     <div className="relative flex">
       
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
-        <Searchbar />
+        
 
-        <div className="px-6 h-[calc(100vh-20px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
+        <div className="px-6 h-[calc(100vh-0px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
           <div className="flex  lg:w-[3%] md:w-full  ">
             <Sidebar />
           </div>
-          <div className="flex  lg:w-[68%] md:w-full  h-fit pb-40">
+          <div className="flex flex-col  lg:w-[68%] md:w-full  h-fit pb-40 mt-6">
+            <Searchbar />
             <Routes>
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
