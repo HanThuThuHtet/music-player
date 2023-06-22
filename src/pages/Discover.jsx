@@ -10,13 +10,13 @@ const Discover = () => {
     const dispatch = useDispatch();
     const {activeSong , isPlaying , genreListId } = useSelector((state) => state.player);
    
-    const { allData , isAllFetching , allerror } = useGetChartsQuery();
-    const { data , isFetching , error } = useGetTopSongsByGenreQuery(genreListId || 'POP');
+    const { data , isAllFetching , allError } = useGetChartsQuery();
+    //const { data , isFetching , error } = useGetTopSongsByGenreQuery(genreListId || 'POP');
     
     const genreTitle = genres.find(({ value }) => value === genreListId)?.title;
 
-    if(isFetching) return <Loader title="Loading song ..." /> ;
-    if(error) return <Error /> ;
+    if(isAllFetching) return <Loader title="Loading song ..." /> ;
+    if(allError) return <Error /> ;
 
     return(
         <div className="flex flex-col ">
@@ -26,7 +26,8 @@ const Discover = () => {
                 <select name="" id="" onChange={(e) => {dispatch(selectGenreListId(e.target.value))}}
                         value={genreListId || 'pop'}
                         className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5">
-                    {genres.map((genre) => <option key={genre.value} value={genre.value}>{genre.title}</option> )}
+                    {/* {genres.map((genre) => <option key={genre.value} value={genre.value}>{genre.title}</option> )} */}
+                    <option value="">All</option>
                 </select>
             </div>
 

@@ -24,7 +24,8 @@ import { createApi , fetchBaseQuery } from '@reduxjs/toolkit/query/react';
         }),
         endpoints: (builder) => ({
           getCharts: builder.query({ query: () =>  '/charts/track'}), 
-          getSongDetails:builder.query({ query: ({songId}) => `songs/v2/get-details?id=${songId}` })
+          getSongDetails:builder.query({ query: ({songId}) => `songs/v2/get-details?id=${songId}` }),
+          getTracksBySearch: builder.query({query: (Searchterm) => `/search?term=${Searchterm}`})
         }),
     });
 
@@ -58,6 +59,7 @@ import { createApi , fetchBaseQuery } from '@reduxjs/toolkit/query/react';
     
     export const {
       useGetChartsQuery ,
+      useGetTracksBySearchQuery
       
     } = shazamApi ;
 
