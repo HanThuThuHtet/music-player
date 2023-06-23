@@ -12,7 +12,7 @@ const NavLinks = ({handleClick}) => (
       <NavLink 
         key={link.name}
         to={link.to}
-        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-green-600"
+        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400"
         onClick={() => handleClick && handleClick()}
       >
         <link.icon className="w-6 h-6 mr-2" />
